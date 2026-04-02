@@ -2,22 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install --legacy-peer-deps",
-  "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "@pkgsentry-supabase-url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@pkgsentry-supabase-anon-key",
-    "SUPABASE_SERVICE_KEY": "@pkgsentry-supabase-service-key",
-    "STRIPE_SECRET_KEY": "@pkgsentry-stripe-secret",
-    "STRIPE_WEBHOOK_SECRET": "@pkgsentry-stripe-webhook-secret",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@pkgsentry-stripe-publishable",
-    "STRIPE_PRO_PRICE_ID": "@pkgsentry-stripe-pro-price",
-    "STRIPE_TEAM_PRICE_ID": "@pkgsentry-stripe-team-price",
-    "GROQ_API_KEY": "@pkgsentry-groq-key",
-    "GITHUB_APP_ID": "@pkgsentry-github-app-id",
-    "GITHUB_PRIVATE_KEY": "@pkgsentry-github-private-key",
-    "GITHUB_WEBHOOK_SECRET": "@pkgsentry-github-webhook-secret",
-    "GITHUB_CLIENT_ID": "@pkgsentry-github-client-id",
-    "GITHUB_CLIENT_SECRET": "@pkgsentry-github-client-secret",
-    "BACKEND_URL": "@pkgsentry-backend-url"
-  }
+  "installCommand": "npm install --legacy-peer-deps"
 }

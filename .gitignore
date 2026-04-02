@@ -35,3 +35,7 @@ npm-debug.log*
 
 # Build
 build/
+.vercel
+
+# Private owner files
+LINKS.md
