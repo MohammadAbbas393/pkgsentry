@@ -441,13 +441,14 @@ function Nav() {
           >
             <Github className="w-5 h-5" />
           </motion.a>
-          <motion.button
+          <motion.a
+            href="/signup"
             className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 text-sm font-bold rounded-xl transition-colors shadow-lg shadow-cyan-500/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Install Free
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </motion.nav>
@@ -696,7 +697,8 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.75 }}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-10"
             >
-              <motion.button
+              <motion.a
+                href="/signup"
                 className="group relative px-6 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all text-sm flex items-center gap-2 justify-center shadow-xl shadow-cyan-500/25 overflow-hidden"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
@@ -704,9 +706,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <Github className="w-4 h-4 relative z-10" />
                 <span className="relative z-10">Install GitHub App — Free</span>
-              </motion.button>
+              </motion.a>
 
-              <motion.button
+              <motion.a
+                href="/signup"
                 className="px-6 py-3.5 glass-bright text-slate-300 hover:text-white font-medium rounded-xl transition-all text-sm flex items-center gap-2 justify-center"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
@@ -714,7 +717,7 @@ export default function Home() {
                 <Eye className="w-4 h-4" />
                 View live demo
                 <ArrowRight className="w-3.5 h-3.5" />
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Mini stats */}
@@ -1280,13 +1283,14 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <motion.button
-                className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-slate-700/60 hover:border-slate-600 transition-colors text-sm"
+              <motion.a
+                href="/signup"
+                className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-slate-700/60 hover:border-slate-600 transition-colors text-sm text-center block"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Get started free
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Pro — highlighted */}
@@ -1343,13 +1347,14 @@ export default function Home() {
                 ))}
               </ul>
 
-              <motion.button
-                className="w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-colors text-sm shadow-lg shadow-cyan-500/20"
+              <motion.a
+                href="/signup"
+                className="w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-colors text-sm shadow-lg shadow-cyan-500/20 text-center block"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
               >
                 Start Pro trial
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Team */}
@@ -1396,13 +1401,14 @@ export default function Home() {
                 ))}
               </ul>
 
-              <motion.button
-                className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-purple-500/30 hover:border-purple-500/50 transition-colors text-sm"
+              <motion.a
+                href="/signup"
+                className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-purple-500/30 hover:border-purple-500/50 transition-colors text-sm text-center block"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Contact sales
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
@@ -1455,7 +1461,8 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <motion.button
+              <motion.a
+                href="/signup"
                 className="group relative px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-2xl transition-all text-base flex items-center gap-2 justify-center shadow-2xl shadow-cyan-500/30 overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -1464,17 +1471,18 @@ export default function Home() {
                 <Github className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">Install GitHub App — Free</span>
                 <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              </motion.a>
 
-              <motion.button
+              <motion.a
+                href="/login"
                 className="px-8 py-4 glass-bright text-slate-300 hover:text-white font-medium rounded-2xl transition-all text-base flex items-center gap-2 justify-center border border-slate-700/60"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Code2 className="w-5 h-5" />
-                View docs
+                Sign in
                 <ExternalLink className="w-3.5 h-3.5" />
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             <motion.p
