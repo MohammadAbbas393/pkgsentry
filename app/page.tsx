@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useEffect, useState, useCallback } from 'react'
+import Link from 'next/link'
 import {
   motion,
   useInView,
@@ -10,6 +11,8 @@ import {
   useMotionValue,
   useSpring,
 } from 'framer-motion'
+
+const MotionLink = motion(Link)
 import {
   Shield,
   Search,
@@ -418,20 +421,20 @@ function Nav() {
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-7">
           {links.map((l) => (
-            <motion.a
+            <MotionLink
               key={l}
               href={`#${l.toLowerCase().replace(/\s+/g, '-')}`}
               className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-200"
               whileHover={{ y: -1 }}
             >
               {l}
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
 
         {/* CTA */}
         <div className="flex items-center gap-3">
-          <motion.a
+          <MotionLink
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -440,15 +443,15 @@ function Nav() {
             whileTap={{ scale: 0.9 }}
           >
             <Github className="w-5 h-5" />
-          </motion.a>
-          <motion.a
+          </MotionLink>
+          <MotionLink
             href="/signup"
             className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 text-sm font-bold rounded-xl transition-colors shadow-lg shadow-cyan-500/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Install Free
-          </motion.a>
+          </MotionLink>
         </div>
       </div>
     </motion.nav>
@@ -697,7 +700,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.75 }}
               className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-10"
             >
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="group relative px-6 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-all text-sm flex items-center gap-2 justify-center shadow-xl shadow-cyan-500/25 overflow-hidden"
                 whileHover={{ scale: 1.04 }}
@@ -706,9 +709,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <Github className="w-4 h-4 relative z-10" />
                 <span className="relative z-10">Install GitHub App — Free</span>
-              </motion.a>
+              </MotionLink>
 
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="px-6 py-3.5 glass-bright text-slate-300 hover:text-white font-medium rounded-xl transition-all text-sm flex items-center gap-2 justify-center"
                 whileHover={{ scale: 1.04 }}
@@ -717,7 +720,7 @@ export default function Home() {
                 <Eye className="w-4 h-4" />
                 View live demo
                 <ArrowRight className="w-3.5 h-3.5" />
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
             {/* Mini stats */}
@@ -1283,14 +1286,14 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-slate-700/60 hover:border-slate-600 transition-colors text-sm text-center block"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Get started free
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
             {/* Pro — highlighted */}
@@ -1347,14 +1350,14 @@ export default function Home() {
                 ))}
               </ul>
 
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="w-full py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-xl transition-colors text-sm shadow-lg shadow-cyan-500/20 text-center block"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
               >
                 Start Pro trial
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
             {/* Team */}
@@ -1401,14 +1404,14 @@ export default function Home() {
                 ))}
               </ul>
 
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="w-full py-3 glass-bright text-white font-semibold rounded-xl border border-purple-500/30 hover:border-purple-500/50 transition-colors text-sm text-center block"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 Contact sales
-              </motion.a>
+              </MotionLink>
             </motion.div>
           </motion.div>
         </div>
@@ -1461,7 +1464,7 @@ export default function Home() {
               variants={fadeUp}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <motion.a
+              <MotionLink
                 href="/signup"
                 className="group relative px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold rounded-2xl transition-all text-base flex items-center gap-2 justify-center shadow-2xl shadow-cyan-500/30 overflow-hidden"
                 whileHover={{ scale: 1.05 }}
@@ -1471,9 +1474,9 @@ export default function Home() {
                 <Github className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">Install GitHub App — Free</span>
                 <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              </MotionLink>
 
-              <motion.a
+              <MotionLink
                 href="/login"
                 className="px-8 py-4 glass-bright text-slate-300 hover:text-white font-medium rounded-2xl transition-all text-base flex items-center gap-2 justify-center border border-slate-700/60"
                 whileHover={{ scale: 1.05 }}
@@ -1482,7 +1485,7 @@ export default function Home() {
                 <Code2 className="w-5 h-5" />
                 Sign in
                 <ExternalLink className="w-3.5 h-3.5" />
-              </motion.a>
+              </MotionLink>
             </motion.div>
 
             <motion.p
