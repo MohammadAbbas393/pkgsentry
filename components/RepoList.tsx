@@ -60,7 +60,7 @@ export default function RepoList({ repos, plan, repoLimit, userId }: {
       {atLimit && (
         <div className="mb-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg px-4 py-3 text-yellow-400 text-sm">
           You've reached the {repoLimit}-repo limit on your {plan} plan.{' '}
-          <Link href="/dashboard/billing" className="underline">Upgrade to add more.</Link>
+          <Link href="/billing" className="underline">Upgrade to add more.</Link>
         </div>
       )}
       <div className="bg-slate-900/80 border border-slate-800 rounded-xl overflow-hidden">

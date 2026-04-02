@@ -30,7 +30,7 @@ export default async function ScanDetailPage({ params }: { params: { id: string 
 
   return (
     <div className="p-8 max-w-4xl">
-      <Link href="/dashboard/scans" className="flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors">
+      <Link href="/scans" className="flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors">
         <ArrowLeft className="w-4 h-4" />Back to scans
       </Link>
 

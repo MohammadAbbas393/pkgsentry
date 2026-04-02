@@ -32,7 +32,7 @@ export default async function ScansPage() {
               const high = summary.high ?? 0
               const clean = scan.status === 'done' && critical === 0 && high === 0
               return (
-                <Link key={scan.id} href={`/dashboard/scans/${scan.id}`}
+                <Link key={scan.id} href={`/scans/${scan.id}`}
                   className="flex items-center px-5 py-4 hover:bg-slate-800/50 transition-colors group">
                   <div className="mr-4">
                     {scan.status === 'done' && clean && <CheckCircle className="w-5 h-5 text-green-400" />}

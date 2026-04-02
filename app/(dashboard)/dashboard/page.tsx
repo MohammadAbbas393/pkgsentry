@@ -74,7 +74,7 @@ export default async function DashboardPage() {
             <h2 className="font-semibold text-white flex items-center gap-2">
               <Clock className="w-4 h-4 text-slate-400" />Recent Scans
             </h2>
-            <Link href="/dashboard/scans" className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1">
+            <Link href="/scans" className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1">
               View all <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
@@ -84,7 +84,7 @@ export default async function DashboardPage() {
               const repo = (scan as any).repositories?.full_name ?? 'Unknown'
               const hasIssues = (summary.critical ?? 0) + (summary.high ?? 0) > 0
               return (
-                <Link key={scan.id} href={`/dashboard/scans/${scan.id}`}
+                <Link key={scan.id} href={`/scans/${scan.id}`}
                   className="flex items-center px-5 py-3.5 hover:bg-slate-800/50 transition-colors group">
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-white truncate">{repo}</p>
@@ -113,7 +113,7 @@ export default async function DashboardPage() {
           <p className="text-xs text-slate-500">{repos?.length ?? 0} / {repoLimit === -1 ? '∞' : repoLimit} repositories</p>
         </div>
         {plan !== 'team' && (
-          <Link href="/dashboard/billing" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
+          <Link href="/billing" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
             Upgrade →
           </Link>
         )}
