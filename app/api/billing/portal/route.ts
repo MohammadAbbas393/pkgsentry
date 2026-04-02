@@ -13,11 +13,11 @@ export async function POST(req: Request) {
     .eq('user_id', user.id)
     .single()
 
-  if (!sub?.stripe_customer_id) return NextResponse.redirect(new URL('/dashboard/billing', req.url))
+  if (!sub?.stripe_customer_id) return NextResponse.redirect(new URL('/billing', req.url))
 
   const session = await stripe.billingPortal.sessions.create({
     customer: sub.stripe_customer_id,
-    return_url: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard/billing`,
+    return_url: `${process.env.NEXT_PUBLIC_APP_URL}/billing`,
   })
 
   return NextResponse.redirect(session.url, { status: 303 })

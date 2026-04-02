@@ -9,10 +9,10 @@ import clsx from 'clsx'
 
 const NAV = [
   { href: '/dashboard', icon: LayoutDashboard, label: 'Overview' },
-  { href: '/dashboard/repos', icon: GitBranch, label: 'Repositories' },
-  { href: '/dashboard/scans', icon: Scan, label: 'Scan History' },
-  { href: '/dashboard/billing', icon: CreditCard, label: 'Billing' },
-  { href: '/dashboard/settings', icon: Settings, label: 'Settings' },
+  { href: '/repos', icon: GitBranch, label: 'Repositories' },
+  { href: '/scans', icon: Scan, label: 'Scan History' },
+  { href: '/billing', icon: CreditCard, label: 'Billing' },
+  { href: '/settings', icon: Settings, label: 'Settings' },
 ]
 
 export default function DashboardSidebar({ user }: { user: User }) {
