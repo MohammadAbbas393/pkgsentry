@@ -33,12 +33,24 @@ export default function RepoList({ repos, plan, repoLimit, userId }: {
 
   async function triggerScan(repoId: string) {
     setScanning(repoId)
-    await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL ?? 'http://localhost:8000'}/scan`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ repo_id: repoId, triggered_by: 'manual' }),
-    })
-    setScanning(null)
+    try {
+      const res = await fetch('/api/scan', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ repo_id: repoId }),
+      })
+      const { scan_id } = await res.json()
+      // Poll until done
+      for (let i = 0; i < 30; i++) {
+        await new Promise(r => setTimeout(r, 2000))
+        const poll = await fetch(`/api/scan/${scan_id}`)
+        const s = await poll.json()
+        if (s.status === 'done' || s.status === 'failed') break
+      }
+      window.location.href = '/scans'
+    } catch {
+      setScanning(null)
+    }
   }
 
   if (list.length === 0) {
