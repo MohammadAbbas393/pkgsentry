@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-_client: Client | None = None
+_client = None  # type: Client
 
 def get_db() -> Client:
     global _client

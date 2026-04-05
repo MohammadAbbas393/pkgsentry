@@ -1,7 +1,7 @@
 import os
 from groq import Groq
 
-_client: Groq | None = None
+_client = None  # type: Groq
 
 def get_client() -> Groq:
     global _client

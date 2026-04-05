@@ -46,7 +46,7 @@ def get_file_content(token: str, repo_full_name: str, path: str, ref: Optional[s
 
 MANIFEST_FILES = ["package.json", "requirements.txt", "go.sum", "Cargo.lock", "pom.xml"]
 
-def fetch_manifests(token: str, repo_full_name: str, ref: Optional[str] = None) -> dict[str, str]:
+def fetch_manifests(token: str, repo_full_name: str, ref: Optional[str] = None):
     """Fetch all dependency manifest files from a repo."""
     manifests = {}
     for filename in MANIFEST_FILES:

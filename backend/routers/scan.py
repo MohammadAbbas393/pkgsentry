@@ -38,7 +38,7 @@ async def trigger_scan(req: ScanRequest, background_tasks: BackgroundTasks):
 
     return {"scan_id": scan_id, "status": "running"}
 
-async def run_scan(scan_id: str, installation_id: int, full_name: str, ref: str | None):
+async def run_scan(scan_id: str, installation_id: int, full_name: str, ref=None):
     db = get_db()
     try:
         # Get GitHub token
